@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Test",
+            "name": "Zwack",
             "program": "${workspaceFolder}/zwack.js"
         }
     ]
