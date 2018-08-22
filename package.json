@@ -1,8 +1,8 @@
 {
-  "name": "ble-cycling-power",
+  "name": "zwack",
   "version": "0.0.1",
-  "description": "A Virtual Bluetooth 4.0 Low Energy Cycling Power",
-  "main": "bluetooth-peripheral.js",
+  "description": "Simulate an indoor trainer with BLE (Bluetooth Low Energy)",
+  "main": "zwack.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,20 +11,21 @@
     "readline": "^1.3.0"
   },
   "repository": {
-    "type": "git",
-    "url": "git+ssh://github.com/olympum/ble-cycling-power.git"
+    "type": "https",
+    "url": "https://github.com/paixaop/zwack.git"
   },
   "keywords": [
     "bluetooth",
     "cycling",
     "power",
     "cadence",
-    "sensor"
+    "sensor",
+    "simulation"
   ],
-  "author": "Bruno Fernandez-Ruiz",
+  "author": "Pedro Paixao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olympum/ble-cycling-power/issues"
+    "url": "https://github.com/paixaop/zwack/issues"
   },
-  "homepage": "https://github.com/olympum/ble-cycling-power#readme"
+  "homepage": "https://github.com/paixaop/zwack"
 }
