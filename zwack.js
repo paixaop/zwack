@@ -1,6 +1,5 @@
-var bcp = require('./');
+var BluetoothPeripheral = require('./bluetooth-peripheral');
 const readline = require('readline');
-
 
 // default parameters
 var cadence = 90;
@@ -17,7 +16,7 @@ var watts = power;
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 
-var peripheral = new bcp.BluetoothPeripheral(sensorName);
+var peripheral = new BluetoothPeripheral(sensorName);
 process.stdin.on('keypress', (str, key) => {
   if (key.name === 'x' || key.name == 'q' || ( key.ctrl && key.name == 'c' ) ) {
     process.exit(); // eslint-disable-line no-process-exit
