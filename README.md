@@ -12,9 +12,7 @@ Clone this repo and run
 
     npm install
 
-then 
-
-    node zwack.js
+You may need to install Xcode on Mac to compile the `bleno` Bluetooth module. 
 
 # Usage
 

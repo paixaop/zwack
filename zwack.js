@@ -1,4 +1,4 @@
-var BluetoothPeripheral = require('./bluetooth-peripheral');
+var BluetoothPeripheral = require('./lib/bluetooth-peripheral');
 const readline = require('readline');
 
 // default parameters

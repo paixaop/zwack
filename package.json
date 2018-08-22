@@ -1,6 +1,6 @@
 {
   "name": "zwack",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Simulate an indoor bicycle trainer with BLE (Bluetooth Low Energy)",
   "main": "zwack.js",
   "scripts": {
