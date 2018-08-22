@@ -1,6 +1,6 @@
 # Zwack
 
-You can simulate an indoor bike trainer (turbo) and generate power and cadence data that can be used to test bike computers, fitness, or virtual indoor bike apps.
+You can simulate a Bluetooth Low Energy enabled indoor bike trainer (turbo) and generate power and cadence data that can be used to test bike computers, fitness, or virtual indoor bike apps.
 
 # Installation
 
