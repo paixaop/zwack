@@ -1,6 +1,12 @@
 # Zwack
 
-You can simulate an indoor bike trainer (turbo) and generate power and cadence data that can be used to test fitness, or virtual indoor bike apps.
+You can simulate an indoor bike trainer (turbo) and generate power and cadence data that can be used to test bike computers, fitness, or virtual indoor bike apps.
+
+# Installation
+
+Install from npm
+
+    npm i zwack
 
 Clone this repo and run 
 
@@ -9,6 +15,8 @@ Clone this repo and run
 then 
 
     node zwack.js
+
+# Usage
 
 If your indoor biking software does not detect the BLE sensor, disable, then enable, the Bluetooth on the machine where `zwack` is running and retry to discover and connect to the sensor again.
 
@@ -30,6 +38,7 @@ Press 'x' or 'q' to exit Zwack.
 # Requirements
 
 Requires NodeJS, and should run in all Bleno (the base BLE module) supported platforms, which are Mac, Windows or Raspberry Pi. 
+
 Zwack cannot run in the same computer as the fitness or virtual indoor bike app, you'll need to run them on different systems.
 
 ## Credits
