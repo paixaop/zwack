@@ -19,7 +19,7 @@ At this time Zwack runs succesfuly on Mac OSX and Raspberry PI. Should run on Wi
 
 Install from npm
 
-    npm i zwack
+    npm i zwackble
 
 Clone this repo and run 
 
@@ -27,15 +27,39 @@ Clone this repo and run
 
 You may need to install Xcode on Mac to compile the `bleno` Bluetooth module. 
 
-# Usage
+# Debug Flags
 
-Usage is very simple just start Zwack by running
+You can see a lot of debug information if you run the simulator or your app with the DEBUG environment variable set to 
 
-    node zwack.js
+  * csp - Cycling Power and Cadence messages
+  * rsc - Running Speed and Cadence messages
+  * ble - Bluetooth low energy messages
 
-On a different machine start your fitness app, bike computer or indoor virtual bike simulation software, and pair up the Zwack BLE sensor. The sensor name should be `Zwack`, it may have some numbers added to the name or you may see the host name of the computer running zwack. It all depends on the operating system you're uing to run Zwack.
+Example:
+
+    DEBUG=rsc npm run simulator
+
+You'll see something similar to this
+
+```
+rsc [Zwack notifyRSC] {"speed":4.4703888888888885,"cadence":180} +0ms
+rsc Running Speed: 4.4703888888888885 +2ms
+rsc Running Cadence: 180 +0ms
+rsc [Zwack notifyRSC] {"speed":4.4703888888888885,"cadence":180} +1s
+rsc Running Speed: 4.4703888888888885 +0ms
+```
+
+# Using the simulator
+
+Start the simulator by executing:
+
+    npm run simulator
+
+On a different machine start your fitness app, bike computer or indoor virtual bike simulation software, like Zwift, and pair up the Zwack BLE sensor. The sensor name should be `Zwack`, it may have some numbers added to the name or you may see the host name of the computer running zwack. It all depends on the operating system you're uing to run Zwack.
 
 If your indoor biking software does not detect the BLE sensor, disable, then enable, the Bluetooth on the machine where Zwack is running and retry to discover and connect to the sensor again.
+
+The ZwackBLE sensor may show up as `Zwack` or has the host name of the machine running Zwack. This is normal.
 
 Updating simulation parameters
 
