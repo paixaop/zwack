@@ -11,6 +11,9 @@ Zwack has many possible uses, here are some examples:
   * Simulate a runner's speed and pace test bike computers fitness, or virtual indoor bike apps. 
   * Integrate a common treadmill with Zwift, sending data from the treadmill to the Zwift game via bluetooth
 
+# Supports
+
+At this time Zwack runs succesfuly on Mac OSX and Raspberry PI. Should run on Windows but it hasn't been tested. If it works let me know.
 
 # Installation
 
@@ -41,7 +44,7 @@ Updating simulation parameters
       p/P - Decrease/Increase power
       s/S - Decrease/Increase running speed
       d/D - Decrease/Increase running cadence  
-      
+
       r/R - Decrease/Increase parameter variability
       i/I - Decrease/Increase parameter increment
       x/q - Exit
