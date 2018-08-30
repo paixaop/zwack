@@ -19,9 +19,9 @@ At this time Zwack runs succesfuly on Mac OSX and Raspberry PI. Should run on Wi
 
 Install from npm
 
-    npm i zwackble
+    npm i zwack
 
-Clone this repo and run 
+or clone this repo and run 
 
     npm install
 
