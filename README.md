@@ -1,6 +1,16 @@
 # Zwack
 
-You can simulate a Bluetooth Low Energy enabled indoor bike trainer (turbo) and generate power and cadence data that can be used to test bike computers, fitness, or virtual indoor bike apps.
+Simulate/Implement a Bluetooth Low Energy sensor that can send:
+
+  * Cycling Power and Cadence (CSP Bluetooth profile)
+  * Running Speed and Cadence (RSC Bluetooth profile)
+
+Zwack has many possible uses, here are some examples:
+
+  * Simulate an indoor bike trainer (turbo) generating cyclist power and cadence data to test bike computers fitness, or virtual indoor bike apps. 
+  * Simulate a runner's speed and pace test bike computers fitness, or virtual indoor bike apps. 
+  * Integrate a common treadmill with Zwift, sending data from the treadmill to the Zwift game via bluetooth
+
 
 # Installation
 
@@ -29,7 +39,9 @@ Updating simulation parameters
     List of Available Keys
       c/C - Decrease/Increase cadence
       p/P - Decrease/Increase power
-
+      s/S - Decrease/Increase running speed
+      d/D - Decrease/Increase running cadence  
+      
       r/R - Decrease/Increase parameter variability
       i/I - Decrease/Increase parameter increment
       x/q - Exit

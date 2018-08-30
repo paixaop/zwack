@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "bleno": "^0.5.0",
-    "convert-units": "^2.3.4",
     "readline": "^1.3.0"
   },
   "repository": {
@@ -17,11 +16,17 @@
   },
   "keywords": [
     "bluetooth",
+    "ble",
     "cycling",
     "power",
     "cadence",
     "sensor",
-    "simulation"
+    "simulation",
+    "zwift",
+    "running",
+    "run",
+    "speed",
+    "pace"
   ],
   "author": "Pedro Paixao",
   "license": "MIT",
