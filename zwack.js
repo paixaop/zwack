@@ -1,6 +1,5 @@
 var ZwackBLE = require('./lib/zwack-ble-sensor');
 const readline = require('readline');
-var convert = require('convert-units');
 
 // default parameters
 var cadence = 90;
