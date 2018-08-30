@@ -1,4 +1,4 @@
-# Zwack
+# Zwack BLE
 
 Simulate/Implement a Bluetooth Low Energy sensor that can send:
 
@@ -87,5 +87,4 @@ Zwack cannot run on the same computer as the fitness or virtual indoor bike app,
 
 ## Credits
 
-Most of the code is from on [ble-cycling-power](https://github.com/olympum/ble-cycling-power) code from olympum, and has a few fixes and changes to 
-update power and cadence in real time, by using the keyboard.
+Initial prototype based on [ble-cycling-power](https://github.com/olympum/ble-cycling-power) code from olympum.
