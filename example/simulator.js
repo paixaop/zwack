@@ -116,12 +116,10 @@ var notifyCadenceCSP = function() {
 
 
 var notifyRSC = function() {
-  watts = Math.floor(Math.random() * randomness + power);
-
   try {
     zwackBLE.notifyRSC({
-      'speed': toMs(runningSpeed),
-      'cadence': runningCadence
+      'speed': toMs(Math.random() + runningSpeed),
+      'cadence': Math.floor(Math.random() * 2 + runningCadence)
     });
   }
   catch( e ) {

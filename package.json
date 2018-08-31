@@ -1,8 +1,8 @@
 {
   "name": "zwack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simulate an indoor bicycle trainer with BLE (Bluetooth Low Energy)",
-  "main": "zwack.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "simulator": "node ./example/simulator.js"
