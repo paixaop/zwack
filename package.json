@@ -61,7 +61,9 @@
   "scripts": {
     "simulator": "node ./example/simulator.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm version patch; npm publish"
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major"
   },
   "version": "0.1.5"
 }
