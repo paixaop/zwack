@@ -63,5 +63,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm version patch; npm publish"
   },
-  "version": "0.1.3"
+  "version": "0.1.4"
 }
