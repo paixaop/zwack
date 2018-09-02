@@ -1,20 +1,42 @@
 {
-  "name": "zwack",
-  "version": "0.1.1",
-  "description": "Simulate an indoor bicycle trainer with BLE (Bluetooth Low Energy)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "simulator": "node ./example/simulator.js"
+  "_from": "zwack@0.1.2",
+  "_id": "zwack@0.1.2",
+  "_inBundle": false,
+  "_integrity": "sha512-ENFeW0NmTrh+vGdZGLzZNLRSIjgptoYbm76gkqpmJIp2YQnF8EyssIcx2ZnCKZS3kGren2M1roE76na93dwRJg==",
+  "_location": "/zwack",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "zwack@0.1.2",
+    "name": "zwack",
+    "escapedName": "zwack",
+    "rawSpec": "0.1.2",
+    "saveSpec": null,
+    "fetchSpec": "0.1.2"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/zwack/-/zwack-0.1.2.tgz",
+  "_shasum": "c6044caec4fc49929e5906472ec4fa37d73ceed2",
+  "_spec": "zwack@0.1.2",
+  "_where": "/Users/pedro/IDrive-Sync/work/iFit-Controller",
+  "author": {
+    "name": "Pedro Paixao"
+  },
+  "bugs": {
+    "url": "https://github.com/paixaop/zwack/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "bleno": "^0.5.0",
     "readline": "^1.3.0"
   },
-  "repository": {
-    "type": "https",
-    "url": "https://github.com/paixaop/zwack.git"
-  },
+  "deprecated": false,
+  "description": "Simulate an indoor bicycle trainer with BLE (Bluetooth Low Energy)",
+  "homepage": "https://github.com/paixaop/zwack",
   "keywords": [
     "bluetooth",
     "ble",
@@ -29,10 +51,16 @@
     "speed",
     "pace"
   ],
-  "author": "Pedro Paixao",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/paixaop/zwack/issues"
+  "main": "index.js",
+  "name": "zwack",
+  "repository": {
+    "type": "https",
+    "url": "git+https://github.com/paixaop/zwack.git"
   },
-  "homepage": "https://github.com/paixaop/zwack"
+  "scripts": {
+    "simulator": "node ./example/simulator.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.2"
 }
