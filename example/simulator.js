@@ -41,42 +41,48 @@ process.stdin.on('keypress', (str, key) => {
 
     switch(key.name) {
       case 'c':
-        cadence += factor; break;
+        cadence += factor;
         if( cadence < 0 ) {
           cadence = 0;
         }
         if( cadence > 200 ) {
           cadence = 200;
         }
+        break;
       case 'p':
-        power += factor; break;
+        power += factor;
         if( power < 0 ) {
           power = 0;
         }
         if( power > 2500 ) {
           power = 2500;
         }
+        break;
       case 'r':
-        randomness += factor; break;
+        randomness += factor;
         if( randomness < 0 ) {
           randomness = 0;
         }
+        break;
       case 's':
-        runningSpeed += runFactor; break;
+        runningSpeed += runFactor;
         if( runningSpeed < 0 ) {
           runningSpeed = 0;
         }
+        break;
       case 'd':
-        runningCadence += runFactor; break;
+        runningCadence += runFactor;
         if( runningCadence < 0 ) {
           runningCadence = 0;
         }
+        break;
       case 'i':
-        incr += Math.abs(factor)/factor; break;
+        incr += Math.abs(factor)/factor;
         if( incr < 1 ) {
           incr = 1;
         }
-      defaut:
+        break;
+      default:
         listKeys();
     }
     listParams();
