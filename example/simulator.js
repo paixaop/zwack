@@ -117,12 +117,11 @@ var notifyCadenceCSP = function() {
   stroke_count += 1;
   if( cadence <= 0) {
     cadence = 0;
-    setTimeout(notifyCadence, notificationInterval);
+    setTimeout(notifyCadenceCSP, notificationInterval);
     return;
   }
   try {
     zwackBLE.notifyCSP({'watts': watts, 'rev_count': stroke_count });
-//     zwackBLE.notifyFTMS({'watts': watts, 'cadence': cadence/2 });
   }
   catch( e ) {
     console.error(e);
