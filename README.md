@@ -85,6 +85,10 @@ Requires NodeJS, and should run in all Bleno (the base BLE module) supported pla
 
 Zwack cannot run on the same computer as the fitness or virtual indoor bike app, you'll need to run them on different systems.
 
+If you have trouble getting BLE to work on MacOS, you can try to install bleno from abandonware using the command
+
+	npm install bleno@npm:@abandonware/bleno
+
 ## Credits
 
 Initial prototype based on [ble-cycling-power](https://github.com/olympum/ble-cycling-power) code from olympum.
