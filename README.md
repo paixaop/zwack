@@ -4,6 +4,7 @@ Simulate/Implement a Bluetooth Low Energy sensor that can send:
 
   * Cycling Power and Cadence (CSP Bluetooth profile)
   * Running Speed and Cadence (RSC Bluetooth profile)
+  * Cycling Power and Cadence (FTMS Bluetooth profile - partial support)
 
 Zwack has many possible uses, here are some examples:
 
@@ -13,7 +14,7 @@ Zwack has many possible uses, here are some examples:
 
 # Supports
 
-At this time Zwack runs succesfuly on Mac OSX and Raspberry PI. Should run on Windows but it hasn't been tested. If it works let me know.
+At this time Zwack runs succesfuly on Mac OSX (Please check Requirements below) and Raspberry PI. Should run on Windows but it hasn't been tested. If it works let me know.
 
 # Installation
 
@@ -31,9 +32,10 @@ You may need to install Xcode on Mac to compile the `bleno` Bluetooth module.
 
 You can see a lot of debug information if you run the simulator or your app with the DEBUG environment variable set to 
 
-  * csp - Cycling Power and Cadence messages
-  * rsc - Running Speed and Cadence messages
-  * ble - Bluetooth low energy messages
+  * csp  - Cycling Power and Cadence messages
+  * rsc  - Running Speed and Cadence messages
+  * ftms - Fitness Machine Messages
+  * ble  - Bluetooth low energy messages
 
 Example:
 
