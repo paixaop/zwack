@@ -97,15 +97,32 @@ var notifyPowerCSP = function() {
   setTimeout(notifyPowerCSP, notificationInterval);
 };
 
+
+var notifyPowerFTMS = function() {
+  watts = Math.floor(Math.random() * randomness + power);
+  cadence = Math.floor(Math.random() + cadence)
+
+  try {
+    zwackBLE.notifyFTMS({'watts': watts, 'cadence': cadence});
+  }
+  catch( e ) {
+    console.error(e);
+  }
+  
+  setTimeout(notifyPowerFTMS, notificationInterval);
+};
+
+
 var notifyCadenceCSP = function() {
   stroke_count += 1;
   if( cadence <= 0) {
     cadence = 0;
-    setTimeout(notifyCadenceCSP, notificationInterval);
+    setTimeout(notifyCadence, notificationInterval);
     return;
   }
   try {
     zwackBLE.notifyCSP({'watts': watts, 'rev_count': stroke_count });
+//     zwackBLE.notifyFTMS({'watts': watts, 'cadence': cadence/2 });
   }
   catch( e ) {
     console.error(e);
@@ -179,5 +196,6 @@ console.log(`[ZWack] Faking test data for sensor: ${sensorName}`);
 listKeys();
 listParams();
 notifyPowerCSP();
+notifyPowerFTMS();
 notifyCadenceCSP();
 notifyRSC();

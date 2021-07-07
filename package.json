@@ -1,28 +1,28 @@
 {
-  "_from": "zwack@0.1.2",
-  "_id": "zwack@0.1.2",
+  "_from": "zwack",
+  "_id": "zwack@0.1.6",
   "_inBundle": false,
-  "_integrity": "sha512-ENFeW0NmTrh+vGdZGLzZNLRSIjgptoYbm76gkqpmJIp2YQnF8EyssIcx2ZnCKZS3kGren2M1roE76na93dwRJg==",
+  "_integrity": "sha512-BW/Dc95WE60BOkctXpciV0+NqcEx3zGT1IIHHuzlp3iLynq40x97b3WI5qFiBIeN8sb5yLAvrIszImIVbhigEg==",
   "_location": "/zwack",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "tag",
     "registry": true,
-    "raw": "zwack@0.1.2",
+    "raw": "zwack",
     "name": "zwack",
     "escapedName": "zwack",
-    "rawSpec": "0.1.2",
+    "rawSpec": "",
     "saveSpec": null,
-    "fetchSpec": "0.1.2"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/zwack/-/zwack-0.1.2.tgz",
-  "_shasum": "c6044caec4fc49929e5906472ec4fa37d73ceed2",
-  "_spec": "zwack@0.1.2",
-  "_where": "/Users/pedro/IDrive-Sync/work/iFit-Controller",
+  "_resolved": "https://registry.npmjs.org/zwack/-/zwack-0.1.6.tgz",
+  "_shasum": "e7fa487844e5534269e4b0b1df6e1e9e12f925ff",
+  "_spec": "zwack",
+  "_where": "/Users/mjunkmyjunk",
   "author": {
     "name": "Pedro Paixao"
   },
@@ -30,11 +30,8 @@
     "url": "https://github.com/paixaop/zwack/issues"
   },
   "bundleDependencies": false,
-  "resolutions": {
-    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
-  },
   "dependencies": {
-    "@abandonware/bleno": "",
+    "bleno": "npm:@abandonware/bleno@^0.5.1-4",
     "readline": "^1.3.0"
   },
   "deprecated": false,
@@ -62,11 +59,11 @@
     "url": "git+https://github.com/paixaop/zwack.git"
   },
   "scripts": {
-    "simulator": "node ./example/simulator.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "patch": "npm version patch",
+    "major": "npm version major",
     "minor": "npm version minor",
-    "major": "npm version major"
+    "patch": "npm version patch",
+    "simulator": "node ./example/simulator.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.1.6"
 }
