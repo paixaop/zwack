@@ -8,10 +8,11 @@ Simulate/Implement a Bluetooth Low Energy sensor that can send:
 
 Zwack has many possible uses, here are some examples:
 
-  * Simulate an indoor bike trainer (turbo) generating cyclist power and cadence data to test bike computers fitness, or virtual indoor bike apps. 
+  * Simulate an indoor bike trainer (turbo) generating cyclist power,cadence & speed data to test bike computers fitness, or virtual indoor bike apps. 
   * Simulate a runner's speed and pace test bike computers fitness, or virtual indoor bike apps. 
   * Integrate a common treadmill with Zwift, sending data from the treadmill to the Zwift game via bluetooth
-
+  * Simulate an indoor bike trainer (turbo) that is able to receive SetTarget (wattage) commands from test bike fitness apps (eg: BreakAway: Indoor Training) for testing. (This method is currently using the Cycling Power Profile with the addition of Wahoo's extension)
+  
 # Supports
 
 At this time Zwack runs succesfuly on Mac OSX (Please check Requirements below) and Raspberry PI. Should run on Windows but it hasn't been tested. If it works let me know.
@@ -40,6 +41,7 @@ You can see a lot of debug information if you run the simulator or your app with
 Example:
 
     DEBUG=rsc npm run simulator
+    DEBUG=* npm run simulator
 
 You'll see something similar to this
 
@@ -68,7 +70,7 @@ Updating simulation parameters
     List of Available Keys
       c/C - Decrease/Increase cadence
       p/P - Decrease/Increase power
-      s/S - Decrease/Increase running speed
+      s/S - Decrease/Increase running/cycling speed
       d/D - Decrease/Increase running cadence  
 
       r/R - Decrease/Increase parameter variability
@@ -91,6 +93,15 @@ If you have trouble getting BLE to work on MacOS, you can try to install bleno f
 
 	npm install bleno@npm:@abandonware/bleno
 
+## Help Needed
+
+Currently this version of zwack is able to broadcast and simulate a FTMS (indoor bike specifically) profile as well as Cycling Power (which also broadcasts Speed). 
+The current implementation of Cycling Power (with Speed & Cadence) is NOT ideal. Cadence and Speed changes will be erratic 
+  * takes ~2 sec to stabilize and be reflected in output
+  * will be unable to inject randomness into the output
+  * will need help on how to improve it
+
 ## Credits
 
 Initial prototype based on [ble-cycling-power](https://github.com/olympum/ble-cycling-power) code from olympum.
+Codes for FTMS support is taken from the [FortuisANT project ](https://github.com/WouterJD/FortiusANT) and edited to fit usage as a simulator
