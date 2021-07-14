@@ -101,7 +101,13 @@ The current implementation of Cycling Power (with Speed & Cadence) is NOT ideal.
   * will be unable to inject randomness into the output
   * will need help on how to improve it
 
+## Bugs / Feature Enhancement needed
+
+I'm sure there are many bugs but as of now, it works and suits the purpose which is for testing as there are no simulators available for bluetooth (similar in form to simulANT). Current implementation also needs a lot of manual work to select between which cycling profile/service is to be broadcasted at any one time. (I am currently doing this manually by editing the simulator.js and zwack-ble-sensor.js files and uncommenting/commenting the relevant lines)
+
+
 ## Credits
 
 Initial prototype based on [ble-cycling-power](https://github.com/olympum/ble-cycling-power) code from olympum.
+
 Codes for FTMS support is taken from the [FortuisANT project ](https://github.com/WouterJD/FortiusANT) and edited to fit usage as a simulator
