@@ -323,7 +323,7 @@ listKeys();
 listParams();
 
 // Comment or Uncomment each line depending on what is needed
-if ( containsCSP && containsPWR && !containsCAD && !containsSPD )) { notifyPowerCSP(); }	// Simulate Cycling Power Service - Broadcasting Power ONLY
+if ( containsCSP && containsPWR && !containsCAD && !containsSPD ) { notifyPowerCSP(); }	// Simulate Cycling Power Service - Broadcasting Power ONLY
 if ( containsCSP && containsPWR &&  containsCAD && !containsSPD ) { notifyCadenceCSP(); }	// Simulate Cycling Power Service  - Broadcasting Power and Cadence
 if ( containsCSP && containsPWR &&  containsCAD &&  containsSPD ) { notifyCPCS(); }			// Simulate Cycling Power Service - Broadcasting Power and Cadence and Speed
 if ( containsFTMS ) { notifyPowerFTMS(); } 													// Simulate FTMS Smart Trainer - Broadcasting Power and Cadence
