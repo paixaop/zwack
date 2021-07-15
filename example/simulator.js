@@ -1,5 +1,27 @@
 var ZwackBLE = require('../lib/zwack-ble-sensor');
 const readline = require('readline');
+const parseArgs = require('minimist');
+
+const args = parseArgs(process.argv.slice(2));
+
+var containsFTMS = false;
+var containsRSC = false;
+var containsCSP = false;
+var containsSPD = false;
+var containsPWR = false;
+var containsCAD = false;
+
+if ( args.variable === undefined ) {
+  console.error("Error: variable parameter is required eg: npm run simulator -- --variable=ftms");
+  process.exit(1);
+} else {
+  containsFTMS = args.variable.includes('ftms');
+  containsRSC  = args.variable.includes('rsc');
+  containsCSP  = args.variable.includes('csp');
+  containsSPD  = args.variable.includes('speed');
+  containsPWR  = args.variable.includes('power');
+  containsCAD  = args.variable.includes('cadence');
+} 
 
 // default parameters
 var cadence = 90;
@@ -294,13 +316,15 @@ function kmhToMs(speed) {
 
 // Main
 console.log(`[ZWack] Faking test data for sensor: ${sensorName}`);
+console.log(`[ZWack]  Advertising these services: ${args.variable}`);
+
 
 listKeys();
 listParams();
 
 // Comment or Uncomment each line depending on what is needed
-// notifyPowerCSP(); 		// Simulate Cycling Power Service - Broadcasting Power ONLY
-// notifyCadenceCSP();		// Simulate Cycling Power Service  - Broadcasting Power and Cadence
-notifyCPCS()				// Simulate Cycling Power Service - Broadcasting Power and Cadence and Speed
-notifyPowerFTMS();		// Simulate FTMS Smart Trainer - Broadcasting Power and Cadence
-// notifyRSC();				// Simulate Running Speed and Cadence - Broadcasting Speed and Cadence
+if ( containsCSP && containsPWR && !containsCAD && !containsSPD )) { notifyPowerCSP(); }	// Simulate Cycling Power Service - Broadcasting Power ONLY
+if ( containsCSP && containsPWR &&  containsCAD && !containsSPD ) { notifyCadenceCSP(); }	// Simulate Cycling Power Service  - Broadcasting Power and Cadence
+if ( containsCSP && containsPWR &&  containsCAD &&  containsSPD ) { notifyCPCS(); }			// Simulate Cycling Power Service - Broadcasting Power and Cadence and Speed
+if ( containsFTMS ) { notifyPowerFTMS(); } 													// Simulate FTMS Smart Trainer - Broadcasting Power and Cadence
+if ( containsRSC  ) { notifyRSC(); }														// Simulate Running Speed and Cadence - Broadcasting Speed and Cadence

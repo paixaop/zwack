@@ -57,7 +57,7 @@ rsc Running Speed: 4.4703888888888885 +0ms
 
 Start the simulator by executing:
 
-    npm run simulator
+    npm run simulator -- --variable=ftms --variable=rsc --variable=csp --variable=power --variable=cadence --variable=speed
 
 On a different machine start your fitness app, bike computer or indoor virtual bike simulation software, like Zwift, and pair up the Zwack BLE sensor. The sensor name should be `Zwack`, it may have some numbers added to the name or you may see the host name of the computer running zwack. It all depends on the operating system you're uing to run Zwack.
 
@@ -83,6 +83,17 @@ The variability parameter will introduce some random variability to the cadence 
 
 Press `x` or `q` to exit Zwack.
 
+# Command Line Arguments
+
+    npm run simulator -- --variable=ftms --variable=rsc --variable=csp --variable=power --variable=cadence --variable=speed
+
+  * ftms - enable broadcasting as FTMS service
+  * rsc  - enable broadcasting as RSC service
+  * csp  - enable broadcasting as CSP service
+  * power - enable broadcasting CSP with Power only data
+  * cadence - enable broadcasting CSP with Cadence data (to be combined with `power`)
+  * speed - enable broadcasting CSP with Speed data (to be combined with `power`)
+    
 # Requirements
 
 Requires NodeJS, and should run in all Bleno (the base BLE module) supported platforms, which are Mac, Windows or Raspberry Pi. 
@@ -103,7 +114,7 @@ The current implementation of Cycling Power (with Speed & Cadence) is NOT ideal.
 
 ## Bugs / Feature Enhancement needed
 
-I'm sure there are many bugs but as of now, it works and suits the purpose which is for testing as there are no simulators available for bluetooth (similar in form to simulANT). Current implementation also needs a lot of manual work to select between which cycling profile/service is to be broadcasted at any one time. (I am currently doing this manually by editing the simulator.js and zwack-ble-sensor.js files and uncommenting/commenting the relevant lines)
+I'm sure there are many bugs but as of now, it works and suits the purpose which is for testing as there are no simulators available for bluetooth (similar in form to simulANT). 
 
 
 ## Credits
