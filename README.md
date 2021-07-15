@@ -92,7 +92,7 @@ Press `x` or `q` to exit Zwack.
   * csp  - enable broadcasting as CSP service
   * power - enable broadcasting CSP with Power only data
   * cadence - enable broadcasting CSP with Cadence data (to be combined with `power`)
-  * speed - enable broadcasting CSP with Speed data (to be combined with `power`)
+  * speed - enable broadcasting CSP with Speed data (to be combined with `power` and `cadence`)
     
 # Requirements
 
